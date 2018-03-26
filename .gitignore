@@ -1,0 +1,7 @@
+/ComponentX/__history/
+/ComponentX/units/__history/
+*dproj.local
+*.identcache
+*.stat
+*.dcu
+*.groupproj.local
