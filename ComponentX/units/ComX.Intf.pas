@@ -1,4 +1,4 @@
-unit ComX.Intf;
+﻿unit ComX.Intf;
 
 interface
 

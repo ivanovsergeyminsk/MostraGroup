@@ -1,4 +1,4 @@
-unit ComX.DataModel.Publisher;
+﻿unit ComX.DataModel.Publisher;
 
 interface
 

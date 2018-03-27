@@ -1,4 +1,4 @@
-unit ComX.DataModel;
+﻿unit ComX.DataModel;
 
 interface
 

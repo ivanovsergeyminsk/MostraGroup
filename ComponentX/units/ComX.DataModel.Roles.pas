@@ -1,4 +1,4 @@
-unit ComX.DataModel.Roles;
+﻿unit ComX.DataModel.Roles;
 
 interface
 

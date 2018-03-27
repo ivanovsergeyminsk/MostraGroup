@@ -1,5 +1,5 @@
-/// <summary>
-///   Модуль компонента.
+п»ї/// <summary>
+///   РњРѕРґСѓР»СЊ РєРѕРјРїРѕРЅРµРЅС‚Р°.
 /// </summary>
 unit ComX.Comp;
 
@@ -76,23 +76,23 @@ type
   published
     { Published declarations }
     /// <summary>
-    ///   Минимально допустимое значение.
+    ///   РњРёРЅРёРјР°Р»СЊРЅРѕ РґРѕРїСѓСЃС‚РёРјРѕРµ Р·РЅР°С‡РµРЅРёРµ.
     /// </summary>
     property ValueMin: integer read GetMin write SetMin;
     /// <summary>
-    ///   Максимально допустимое значение.
+    ///   РњР°РєСЃРёРјР°Р»СЊРЅРѕ РґРѕРїСѓСЃС‚РёРјРѕРµ Р·РЅР°С‡РµРЅРёРµ.
     /// </summary>
     property ValueMax: integer read GetMax write SetMax;
     /// <summary>
-    ///   Значение по умолчанию.
+    ///   Р—РЅР°С‡РµРЅРёРµ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ.
     /// </summary>
     property ValueDefault: integer read GetDefault write SetDefault;
     /// <summary>
-    ///   Роль.
+    ///   Р РѕР»СЊ.
     /// </summary>
     property Role: TComXRole read GetRole write SetRole;
     /// <summary>
-    ///   Издатель.
+    ///   РР·РґР°С‚РµР»СЊ.
     /// </summary>
     property Publisher: TComX read GetPublisher write SetPublisher;
 
