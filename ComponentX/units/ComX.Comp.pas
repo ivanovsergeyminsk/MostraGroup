@@ -105,7 +105,8 @@ procedure Register;
 implementation
 
 uses
-  Vcl.Graphics;
+  Vcl.Graphics,
+  ComX.Comp.Cnst;
 
 procedure Register;
 begin
@@ -123,8 +124,8 @@ begin
   Self.InitInternalComponents;
 
   Self.OnResize := DoResize;
-  Self.Width    := 150;
-  Self.Height   := 30;
+  Self.Width    := CS_DEFAULT_WIDTH;
+  Self.Height   := CS_DEFAULT_HEIGHT;
 end;
 
 destructor TComX.Destroy;
@@ -209,26 +210,26 @@ begin
 
   with IncButton do
     begin
-      Parent := Self;
-      Align := TAlign.alRight;
-      Caption := '+';
+      Parent  := Self;
+      Align   := TAlign.alRight;
+      Caption := CS_TEXT_INCBUTTON;
       OnClick := Self.DoIncClick;
     end;
 
   with DecButton do
     begin
-      Parent := Self;
-      Align := TAlign.alRight;
-      Caption := '-';
+      Parent  := Self;
+      Align   := TAlign.alRight;
+      Caption := CS_TEXT_DECBUTTON;
       OnClick := Self.DoDecClick;
     end;
 
   with InfoLabel do
     begin
-      Parent := Self;
-      Align := TAlign.alClient;
-      Layout :=TTextLayout.tlCenter;
-      Caption := '<Empty>';
+      Parent  := Self;
+      Align   := TAlign.alClient;
+      Layout  := TTextLayout.tlCenter;
+      Caption := CS_TEXT_EMPTY_INFOLABEL;
     end;
 
 
@@ -238,10 +239,10 @@ begin
       RoleLabel := TLabel.Create(Self);
       with RoleLabel do
         begin
-          Parent := Self;
-          Align := TAlign.alLeft;
-          Font.Color := clRed;
-          AutoSize := true;
+          Parent      := Self;
+          Align       := TAlign.alLeft;
+          Font.Color  := clRed;
+          AutoSize    := true;
         end;
     end;
 
@@ -297,9 +298,9 @@ end;
 procedure TComX.SetVisibleRoleInDesignTime(ARole: TComXRole);
 begin
   case ARole of
-    Master:         RoleLabel.Caption := 'M';
-    Slave:          RoleLabel.Caption := 'S';
-    MasterAndSlave: RoleLabel.Caption := 'MS';
+    Master:         RoleLabel.Caption := CS_TEXT_MASTER_ROLELABEL;
+    Slave:          RoleLabel.Caption := CS_TEXT_SLAVE_ROLELABEL;
+    MasterAndSlave: RoleLabel.Caption := CS_TEXT_MASTER_AND_SLAVE_ROLELABEL;
   end;
 end;
 
@@ -312,7 +313,7 @@ begin
   self.DoBeforeReactionToDependence(FValue);
 
   FValueAsInt := FValue;
-  InfoLabel.Caption := Format('Value: %d ', [FValueAsInt]);
+  InfoLabel.Caption := Format(CS_TEXT_VALUE_INFOLABEL, [FValueAsInt]);
 
   Self.DoAfterReactionToDependence(FValue);
 end;

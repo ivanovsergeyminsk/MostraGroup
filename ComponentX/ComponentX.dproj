@@ -145,6 +145,8 @@
         <DCCReference Include="units\ComX.Intf.pas"/>
         <DCCReference Include="units\ComX.DataModel.Roles.pas"/>
         <DCCReference Include="units\ComX.DataModel.Publisher.pas"/>
+        <DCCReference Include="units\ComX.Comp.Cnst.pas"/>
+        <DCCReference Include="units\ComX.DataModel.Cnst.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

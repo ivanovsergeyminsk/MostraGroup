@@ -72,6 +72,8 @@ contains
   ComX.DataModel in 'units\ComX.DataModel.pas',
   ComX.Intf in 'units\ComX.Intf.pas',
   ComX.DataModel.Roles in 'units\ComX.DataModel.Roles.pas',
-  ComX.DataModel.Publisher in 'units\ComX.DataModel.Publisher.pas';
+  ComX.DataModel.Publisher in 'units\ComX.DataModel.Publisher.pas',
+  ComX.Comp.Cnst in 'units\ComX.Comp.Cnst.pas',
+  ComX.DataModel.Cnst in 'units\ComX.DataModel.Cnst.pas';
 
 end.

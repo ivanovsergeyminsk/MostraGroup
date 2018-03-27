@@ -1,6 +1,7 @@
 object Form1: TForm1
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = #1058#1047' - '#1052#1086#1089#1090#1088#1072#1043#1088#1091#1087#1087
   ClientHeight = 422
@@ -12,6 +13,7 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -33,6 +35,7 @@ object Form1: TForm1
       ValueDefault = 0
       Role = Slave
       Publisher = ComX0
+      OnAfterReactionToDependence = ComX1AfterReactionToDependence
     end
   end
   object Panel2: TPanel

@@ -54,6 +54,9 @@ type
 
 implementation
 
+uses
+  ComX.DataModel.Cnst;
+
 { TComXDataModel }
 
 procedure TComXDataModel.AddSubscriber(ASubscriber: IComXSubscriber);
@@ -64,16 +67,17 @@ end;
 constructor TComXDataModel.Create(AComXView: IComXView);
 begin
   FInnerPublisher := TComXPublisher.Create;
-  FPublisher := nil;
+  FPublisher      := nil;
+
   Self.InitValues;
-  FComXView := AComXView;
+  FComXView       := AComXView;
 end;
 
 procedure TComXDataModel.DecValue;
 var
   FNewValue: integer;
 begin
-  FNewValue := Self.FValue - 1;
+  FNewValue := Self.FValue - CS_INC_DEC_VALUE;
   Self.DoChangeValue(FNewValue);
 end;
 
@@ -121,16 +125,16 @@ procedure TComXDataModel.IncValue;
 var
   FNewValue: integer;
 begin
-  FNewValue := Self.FValue + 1;
+  FNewValue := Self.FValue + CS_INC_DEC_VALUE;
   Self.DoChangeValue(FNewValue);
 end;
 
 procedure TComXDataModel.InitValues;
 begin
-  Self.FMinValue := 0;
-  Self.FMaxValue := 100;
-  Self.FValue := 0;
-  Self.FRole := TComXRole.MasterAndSlave;
+  Self.FMinValue  := CS_DEFAULT_MINVALUE;
+  Self.FMaxValue  := CS_DEFAULT_MAXVALUE;
+  Self.FValue     := CS_DEFAULT_VALUE;
+  Self.FRole      := TComXRole.MasterAndSlave;
 end;
 
 procedure TComXDataModel.NotifyChangedValue(AValue: integer);
